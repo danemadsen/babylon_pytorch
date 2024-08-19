@@ -7,7 +7,7 @@ from scipy.io.wavfile import write
 
 import commons
 import utils
-from dp import text_to_sequence
+from babylon import text_to_sequence
 
 
 def get_text(text, hps):

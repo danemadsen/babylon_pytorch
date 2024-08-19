@@ -6,7 +6,7 @@ import torch
 
 import utils
 from models import SynthesizerTrn
-from dp import symbols
+from babylon import symbols
 
 OPSET_VERSION = 15
 

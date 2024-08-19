@@ -9,7 +9,7 @@ import torch.utils.data
 import commons
 from mel_processing import (mel_spectrogram_torch, spec_to_mel_torch,
                             spectrogram_torch)
-from dp import text_to_sequence
+from babylon import text_to_sequence
 from utils import load_filepaths_and_text, load_wav_to_torch
 
 
@@ -328,7 +328,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
 
     def get_text(self, text):
         text_norm = text_to_sequence(text)
-        
+
         if self.add_blank:
             text_norm = commons.intersperse(text_norm, 0)
         text_norm = torch.LongTensor(text_norm)

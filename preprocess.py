@@ -1,5 +1,5 @@
 import argparse
-from dp import clean_text
+from babylon import clean_text
 from utils import load_filepaths_and_text
 
 if __name__ == "__main__":
