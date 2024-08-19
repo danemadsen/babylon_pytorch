@@ -1,5 +1,5 @@
 import argparse
-import text
+from dp import clean_text
 from utils import load_filepaths_and_text
 
 if __name__ == "__main__":
@@ -23,7 +23,7 @@ if __name__ == "__main__":
         filepaths_and_text = load_filepaths_and_text(filelist)
         for i in range(len(filepaths_and_text)):
             original_text = filepaths_and_text[i][args.text_index]
-            cleaned_text = text._clean_text(original_text, args.text_cleaners)
+            cleaned_text = clean_text(original_text)
             filepaths_and_text[i][args.text_index] = cleaned_text
 
         new_filelist = filelist + "." + args.out_extension

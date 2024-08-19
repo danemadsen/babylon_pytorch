@@ -27,7 +27,7 @@ from models import (AVAILABLE_DURATION_DISCRIMINATOR_TYPES,
                     AVAILABLE_FLOW_TYPES, 
                     DurationDiscriminatorV1, DurationDiscriminatorV2,
                     MultiPeriodDiscriminator, SynthesizerTrn)
-from text.symbols import symbols
+from dp import symbols
 
 torch.backends.cudnn.benchmark = True
 global_step = 0

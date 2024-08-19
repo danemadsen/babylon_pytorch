@@ -7,11 +7,11 @@ from scipy.io.wavfile import write
 
 import commons
 import utils
-from text import text_to_sequence
+from dp import text_to_sequence
 
 
 def get_text(text, hps):
-    text_norm = text_to_sequence(text, hps.data.text_cleaners)
+    text_norm = text_to_sequence(text)
     if hps.data.add_blank:
         text_norm = commons.intersperse(text_norm, 0)
     text_norm = torch.LongTensor(text_norm)
